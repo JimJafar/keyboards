@@ -12,6 +12,6 @@ Have installed the [Hasu custom controller](https://geekhack.org/index.php?topic
 
 ```
 dfu-programmer atmega32u4 erase
-dfu-programmer atmega32u4 flash ./FC660C\ Jim.hex
+dfu-programmer atmega32u4 flash OneDrive/Documents/keyboards/Leopold\ FC660C/FC660C\ Jim.hex
 dfu-programmer atmega32u4 reset
 ```
