@@ -1,5 +1,9 @@
 # Leopold FC660C QMK
 
+[My firmware keymap](https://github.com/EvilJimJafar/qmk_firmware/tree/fc660c/keyboards/fc660c/keymaps/EvilJimJafar)
+
+Local: `~/qmk_firmware/keyboards/fc660c/keymaps/EvilJimJafar`
+
 Have installed the [Hasu custom controller](https://geekhack.org/index.php?topic=88439.0)
 
 [Original keymap](https://i.imgur.com/fg89nez.jpg)
@@ -19,6 +23,8 @@ brew cask install qmk-toolbox
 
 ## Flash Manually
 
+First generate the firmware from the [Configurator](https://config.qmk.fm/#/) and save it to `~/OneDrive/Documents/keyboards/Leopold\ FC660C/qmk/fc660c_jim.hex`
+
 ```
 dfu-programmer atmega32u4 erase
 dfu-programmer atmega32u4 flash ~/OneDrive/Documents/keyboards/Leopold\ FC660C/qmk/fc660c_jim.hex
@@ -27,16 +33,19 @@ dfu-programmer atmega32u4 reset
 
 ## Program layout instead of using the configurator
 
-[Get set up](https://docs.qmk.fm/#/newbs_getting_started)
-
-[config.h](https://beta.docs.qmk.fm/developing-qmk/qmk-reference/config_options)
-
+[Reference](https://beta.docs.qmk.fm/developing-qmk/qmk-reference/)
 
 ```
-# Create your keymap (only do this once) - will be created in ~/qmk_firmware/keyboards/fc660c/keymaps/EvilJimJafar
+# Get set up and connect to your fork.
+brew install qmk/qmk/qmk
+qmk setup EvilJimJafar/qmk_firmware
+cd ~/qmk_firmware
+git checkout fc660c
+
+# Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/fc660c/keymaps/EvilJimJafar
 qmk new-keymap -kb fc660c
 
-# Convert the JSON from Configurator as a starting point:
+# Convert the JSON from Configurator as a starting point (or copy one of the existing community layouts):
 qmk json2c fc660c_jim.hex > ~/qmk_firmware/keyboards/fc660c/keymaps/EvilJimJafar/keymap.c
 
 # Compile
@@ -57,11 +66,35 @@ qmk flash -kb fc660c -km EvilJimJafar
 - Hold TAB for layer 2
 - Hold Caps for layer 3
 
+,--------------------------------------------------------------------------------------------------.
+| Esc |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | Backspace |  | |>| |
+|-----------------------------------------------------------------------------------------+  +-----+
+| Tab    |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   \    |  | Del |
+|-----------------------------------------------------------------------------------------+  +-----+
+| Ctrl    |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |    Enter    |
+|--------------------------------------------------------------------------------------------+
+| Shift      |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  | Shift       | Up  |
++--------------------------------------------------------------------------------------------+-----+
+| Caps  | Alt   | Gui  |               Space                | Fn  | Ctrl | Alt   | Left| Down|Right|
+`--------------------------------------------------------------------------------------------------´
+
 ### Layer 1
 
 - Function keys and coding symbols.
 - Top right keys: Volume up and down.
 - Quote key: Backtick.
+
+,--------------------------------------------------------------------------------------------------.
+| Esc | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |           |  | VUp |
+|-----------------------------------------------------------------------------------------+  +-----+
+|        |     |     |     |     |     |     |  [  |     |     |  ]  |     |     |        |  | VDn |
+|-----------------------------------------------------------------------------------------+  +-----+
+|         |     |     |     |     |     |     |  {  |  (  |  )  |  }  |  `  |             |
+|--------------------------------------------------------------------------------------------+
+|            |     |     |     |     |     |     |     |     |     |     |             |     |
++--------------------------------------------------------------------------------------------+-----+
+|      |       |      |                                    |     |      |       |     |     |     |
+`--------------------------------------------------------------------------------------------------´
 
 ### Layer 2
 
@@ -69,6 +102,30 @@ qmk flash -kb fc660c -km EvilJimJafar
 - Top right keys: Next and previous.
 - Quote key: Tilde.
 
+,--------------------------------------------------------------------------------------------------.
+|     |     |     |     |     |     |     |     |     |     |     |     |     |           |  | Nxt |
+|-----------------------------------------------------------------------------------------+  +-----+
+|        |     |     |     |     |     |     | Home| Up  | End |  ]  |     |     |        |  | Prv |
+|-----------------------------------------------------------------------------------------+  +-----+
+|         |     |     |     |     |     |     | Lft |     | Rgt |  }  |  ~  |             |
+|--------------------------------------------------------------------------------------------+
+|            |     |     |     |     |     | PgDn| Dwn | PgUp|     |     |             |     |
++--------------------------------------------------------------------------------------------+-----+
+|      |       |      |                                    |     |      |       |     |     |     |
+`--------------------------------------------------------------------------------------------------´
+
 ### Layer 3
 
 - NumPad.
+
+,--------------------------------------------------------------------------------------------------.
+|     |     |     |     |     |     |     | NumL|  /  |  *  |  -  |     |     | Backspace |  |     |
+|-----------------------------------------------------------------------------------------+  +-----+
+|        |     |     |     |     |     |     |  7  |  8  |  9  |  +  |     |     |        |  |     |
+|-----------------------------------------------------------------------------------------+  +-----+
+|         |     |     |     |     |     |     |  4   |  5  |  6  |  ,  |     |    Enter   |
+|--------------------------------------------------------------------------------------------+
+|            |     |     |     |     |     |     |  1  |  2  |  3  |  =  |             |     |
++--------------------------------------------------------------------------------------------+-----+
+|      |       |      |                  0                 |  .  |      |       |     |     |     |
+`--------------------------------------------------------------------------------------------------´
