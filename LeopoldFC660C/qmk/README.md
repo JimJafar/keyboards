@@ -23,11 +23,11 @@ brew cask install qmk-toolbox
 
 ## Flash Manually
 
-First generate the firmware from the [Configurator](https://config.qmk.fm/#/) and save it to `~/OneDrive/Documents/keyboards/Leopold\ FC660C/qmk/fc660c_jim.hex`
+First generate the firmware from the [Configurator](https://config.qmk.fm/#/) and save it to `~/OneDrive/Documents/keyboards/LeopoldFC660C/qmk/fc660c_jim.hex`
 
 ```
 dfu-programmer atmega32u4 erase
-dfu-programmer atmega32u4 flash ~/OneDrive/Documents/keyboards/Leopold\ FC660C/qmk/fc660c_jim.hex
+dfu-programmer atmega32u4 flash ~/OneDrive/Documents/keyboards/LeopoldFC660C/qmk/fc660c_jim.hex
 dfu-programmer atmega32u4 reset
 ```
 
@@ -53,6 +53,9 @@ qmk compile -kb fc660c -km EvilJimJafar
 
 # Flash (put keyboard in bootloader mode first.)
 qmk flash -kb fc660c -km EvilJimJafar
+
+# Commit both qmk fork and this repo
+~/OneDrive/Documents/keyboards/LeopoldFC660C/qmk/commit.sh
 ```
 
 ## Layout
