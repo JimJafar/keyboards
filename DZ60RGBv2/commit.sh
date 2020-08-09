@@ -9,11 +9,11 @@ git push
 
 echo "Copying changes to OneDrive"
 
-cp config.h keymap.c ~/OneDrive/Documents/keyboards/DZ60RGBV2/qmk/
+cp config.h keymap.c ~/OneDrive/Documents/keyboards/DZ60RGBV2/
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
-cd ~/OneDrive/Documents/keyboards/DZ60RGBV2/qmk/
+cd ~/OneDrive/Documents/keyboards/DZ60RGBV2/
 git commit . -m"Update dz60rgbv2 layout"
 git push
 
