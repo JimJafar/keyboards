@@ -13,7 +13,7 @@ cp config.h keymap.c ~/OneDrive/Documents/keyboards/DZ60_split_spacebar/
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
-cd ~/OneDrive/Documents/keyboards/DZ60RGBV2/
+cd ~/OneDrive/Documents/keyboards/DZ60_split_spacebar/
 git commit . -m"Update dz60 split spacebar layout"
 git push
 
