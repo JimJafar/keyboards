@@ -10,7 +10,7 @@ git push
 echo "Copying changes to OneDrive"
 
 cp config.h keymap.c ~/OneDrive/Documents/keyboards/DZ60RGBV2/
-cp  ../../rules.mk ~/OneDrive/Documents/keyboards/DZ60RGBV2/v2
+cp  ../../v2/rules.mk ~/OneDrive/Documents/keyboards/DZ60RGBV2/v2
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
