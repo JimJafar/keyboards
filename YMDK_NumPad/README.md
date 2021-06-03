@@ -39,6 +39,10 @@ qmk flash -kb ymdk/np24/u4rgb6 -km EvilJimJafar
 ~/Nextcloud/Documents/keyboards/YMDK_NumPad/qmk/commit.sh
 ```
 
+## Docs from YMDK
+
+https://drive.google.com/file/d/1yDg2wQ75zm-xm1Hgube9cE5oPFdaqgPZ/view?spm=a2g0o.detail.1000023.17.47ef1accIsgdch
+
 ## Layout
 
 ### Base Layer (0)
