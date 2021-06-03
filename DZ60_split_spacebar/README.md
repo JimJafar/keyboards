@@ -28,7 +28,7 @@ brew cask install qmk-toolbox
 brew install qmk/qmk/qmk
 qmk new-keymap -kb dz60
 cd ~/qmk_firmware
-git checkout dz60
+git checkout eviljimjafar
 
 # Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar
 qmk new-keymap -kb dz60
