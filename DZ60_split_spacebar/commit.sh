@@ -14,7 +14,7 @@ git checkout master
 git fetch upstream
 git pull upstream master
 git push origin master
-git checkout dz60_split_spacebar
+git checkout eviljimjafar
 git pull origin master
 git commit
 git push
