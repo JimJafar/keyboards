@@ -8,7 +8,7 @@ Local: `~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar`
 
 [QMK firmware Wiki](https://docs.qmk.fm/#/)
 
-[Keymap editor](https://config.qmk.fm/#/dztech/dz60rgb_ansi/v2/LAYOUT_60_ansi)
+[Keymap editor](https://config.qmk.fm/#/dz60/LAYOUT_60_ansi)
 
 [Flash firmware](https://docs.qmk.fm/#/newbs_flashing)
 
@@ -26,24 +26,27 @@ brew cask install qmk-toolbox
 ```
 # Get set up and connect to your fork.
 brew install qmk/qmk/qmk
-qmk new-keymap -kb dztech/dz60rgb_ansi/v2
+qmk new-keymap -kb dz60
 cd ~/qmk_firmware
-git checkout dztech/dz60rgb_ansi/v2
+git checkout dz60
 
-# Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/dztech/dz60rgb_ansi/v2/keymaps/EvilJimJafar
-qmk new-keymap -kb dztech/dz60rgb_ansi/v2
+# Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar
+qmk new-keymap -kb dz60
 
 # Convert the JSON from Configurator as a starting point (or copy one of the existing community layouts):
-qmk json2c dz60rgbv2_jim.hex > ~/qmk_firmware/keyboards/dztech/dz60rgb_ansi/v2/keymaps/EvilJimJafar/keymap.c
+qmk json2c dz60rgbv2_jim.hex > ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar/keymap.c
 
 # Compile
-qmk compile -kb dztech/dz60rgb_ansi/v2 -km EvilJimJafar
+qmk compile -kb dz60 -km EvilJimJafar
+
+### Note:
+If you get `tmk_core/protocol/lufa.mk:14: lib/lufa/LUFA/makefile: No such file or directory`, run `make git-submodule` in ~/qmk_firmware
 
 # Flash (put keyboard in bootloader mode first.)
-qmk flash -kb dztech/dz60rgb_ansi/v2 -km EvilJimJafar
+qmk flash -kb dz60 -km EvilJimJafar
 
 # Commit both qmk fork and this repo
-~/OneDrive/Documents/keyboards/DZ60RGBV2/qmk/commit.sh
+~/Nextcloud/Documents/keyboards/DZ60_split_spacebar/qmk/commit.sh
 ```
 
 ## Layout
