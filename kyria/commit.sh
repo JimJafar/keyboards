@@ -34,7 +34,7 @@ echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
 cd ~/Nextcloud/Documents/keyboards/kyria/
 git add --all
-git commit . -m"Update kyria split spacebar layout"
+git commit . -m"Update kyria split kb layout"
 git push
 
 echo "DONE"
