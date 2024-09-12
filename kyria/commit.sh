@@ -2,7 +2,7 @@
 
 echo "Committing and pushing changes to EvilJimJafar/qmk_firmware"
 
-cd ~/code/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar
+cd ~/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar
 git checkout eviljimjafar
 git commit . -m"Update kyria layout"
 git push
