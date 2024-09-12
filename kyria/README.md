@@ -22,8 +22,14 @@ brew cask install qmk-toolbox
 ```
 # Get set up and connect to your fork.
 brew install qmk/qmk/qmk
-qmk new-keymap -kb kyria
-cd ~/qmk_firmware
+
+# qmk new-keymap -kb kyria
+# cd ~/qmk_firmware
+# git checkout eviljimjafar
+
+cd ~/code
+git clone git@github.com:JimJafar/qmk_firmware.git
+cd qmk_firmware
 git checkout eviljimjafar
 
 # Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar
