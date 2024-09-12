@@ -11,9 +11,9 @@ echo "Pulling in upstream changes"
 
 cd ~/code/qmk_firmware
 git checkout master
-# git fetch upstream
-git pull origin master
-git push origin master
+git pull
+make git-submodule
+git push
 git checkout eviljimjafar
 git pull origin master
 git commit
