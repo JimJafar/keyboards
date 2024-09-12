@@ -23,16 +23,16 @@ echo "Compiling firmware"
 
 qmk compile -kb dz60 -km EvilJimJafar
 
-echo "Copying changes to NextCloud"
+echo "Copying changes to Documents for syncing to NAS"
 
-cp dz60_EvilJimJafar.hex ~/Nextcloud/Documents/keyboards/DZ60_split_spacebar/
+cp dz60_EvilJimJafar.hex ~/Documents/keyboards/DZ60_split_spacebar/
 
 cd keyboards/dz60/keymaps/EvilJimJafar
-cp config.h keymap.c ~/Nextcloud/Documents/keyboards/DZ60_split_spacebar/
+cp config.h keymap.c ~/Documents/keyboards/DZ60_split_spacebar/
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
-cd ~/Nextcloud/Documents/keyboards/DZ60_split_spacebar/
+cd ~/Documents/keyboards/DZ60_split_spacebar/
 git add --all
 git commit . -m"Update dz60 split spacebar layout"
 git push
