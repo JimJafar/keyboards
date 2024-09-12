@@ -1,5 +1,53 @@
 # splitkb Kyria rev2
 
+Local: `~/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar`
+
+[QMK firmware Wiki](https://docs.qmk.fm/#/)
+
+[Keymap editor](https://config.qmk.fm/#/dz60/LAYOUT_60_ansi)
+
+[Flash firmware](https://docs.qmk.fm/#/newbs_flashing)
+
+## Install [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+
+```
+brew tap homebrew/cask-drivers
+brew cask install qmk-toolbox
+```
+
+## Program layout
+
+[Reference](https://beta.docs.qmk.fm/developing-qmk/qmk-reference/)
+
+```
+# Get set up and connect to your fork.
+brew install qmk/qmk/qmk
+qmk new-keymap -kb kyria
+cd ~/qmk_firmware
+git checkout eviljimjafar
+
+# Create your keymap (only do this once when you get a new keyboard) - will be created in ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar
+qmk new-keymap -kb kyria
+
+# Convert the JSON from Configurator as a starting point (or copy one of the existing community layouts):
+qmk json2c kyria_jim.hex > ~/qmk_firmware/keyboards/dz60/keymaps/EvilJimJafar/keymap.c
+
+# Compile
+qmk compile -kb kyria -km EvilJimJafar
+
+### Note:
+If you get `tmk_core/protocol/lufa.mk:14: lib/lufa/LUFA/makefile: No such file or directory`, run `make git-submodule` in ~/qmk_firmware
+
+# Flash (put keyboard in bootloader mode first.)
+qmk flash -kb kyria -km EvilJimJafar
+
+# Commit both qmk fork and this repo
+~/Documents/keyboards/kyria/qmk/commit.sh
+```
+
+
+# The Kyria v2 board info
+
 https://docs.splitkb.com/hc/en-us/articles/4419084567058-Kyria-rev2-Build-Guide
 
 ![KLE render of the default Kyria keymap with QWERTY as the base layer. Layers are shown in sublegends.](https://i.ibb.co/RQZx2dY/default-kyria2.jpg)

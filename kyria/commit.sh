@@ -23,16 +23,16 @@ echo "Compiling firmware"
 
 qmk compile -kb splitkb/kyria/rev2 -km EvilJimJafar
 
-echo "Copying changes to NextCloud"
+echo "Copying changes to Documents for syncing to NAS"
 
-cp splitkb_kyria_rev2_EvilJimJafar.hex ~/Nextcloud/Documents/keyboards/kyria/
+cp splitkb_kyria_rev2_EvilJimJafar.hex ~/Documents/keyboards/kyria/
 
 cd keyboards/splitkb/kyria/keymaps/EvilJimJafar
-cp config.h keymap.c rules.mk ~/Nextcloud/Documents/keyboards/kyria/
+cp config.h keymap.c rules.mk ~/Documents/keyboards/kyria/
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
 
-cd ~/Nextcloud/Documents/keyboards/kyria/
+cd ~/Documents/keyboards/kyria/
 git add --all
 git commit . -m"Update kyria split kb layout"
 git push
