@@ -22,6 +22,7 @@ brew cask install qmk-toolbox
 ```
 # Get set up and connect to your fork.
 brew install qmk/qmk/qmk
+brew install avr-gcc
 
 # qmk new-keymap -kb kyria
 # cd ~/qmk_firmware
