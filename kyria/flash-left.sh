@@ -6,4 +6,4 @@ cd ~/code/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar
 qmk compile -kb kyria -km EvilJimJafar
 
 # Flash (put keyboard in bootloader mode first.)
-qmk flash -kb kyria -km EvilJimJafar
+qmk flash -kb kyria -km EvilJimJafar -bl dfu-split-left
