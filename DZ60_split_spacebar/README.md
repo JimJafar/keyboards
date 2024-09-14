@@ -46,7 +46,7 @@ If you get `tmk_core/protocol/lufa.mk:14: lib/lufa/LUFA/makefile: No such file o
 qmk flash -kb dz60 -km EvilJimJafar
 
 # Commit both qmk fork and this repo
-~/Nextcloud/Documents/keyboards/DZ60_split_spacebar/qmk/commit.sh
+~/Documents/keyboards/DZ60_split_spacebar/qmk/commit.sh
 ```
 
 ## Layout

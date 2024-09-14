@@ -36,7 +36,7 @@ If you get `tmk_core/protocol/lufa.mk:14: lib/lufa/LUFA/makefile: No such file o
 qmk flash -kb ymdk/np24/u4rgb6 -km EvilJimJafar
 
 # Commit both qmk fork and this repo
-~/Nextcloud/Documents/keyboards/YMDK_NumPad/qmk/commit.sh
+~/Documents/keyboards/YMDK_NumPad/qmk/commit.sh
 ```
 
 ## Docs from YMDK
