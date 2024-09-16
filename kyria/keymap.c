@@ -55,6 +55,11 @@ enum layers {
 #define RW_BH    LCTL(LGUI(KC_M)) // bottom half
 #define RW_TH    LCTL(LGUI(KC_N)) // top half
 
+const uint16_t PROGMEM combo_cmd_esc[] = {KC_LGUI, KC_ESC, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(combo_cmd_esc, LGUI(KC_GRV)),
+};
+
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
 // produces the key `tap` when tapped (i.e. pressed and released).
@@ -77,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY] = LAYOUT(
      KC_ESC  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                        KC_Y,   KC_U   ,  KC_I ,   KC_O ,  KC_P ,  KC_GRV,
-     KC_TAB  , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                        KC_H,   KC_J   ,  KC_K ,   KC_L ,KC_SCLN,KC_QUOTE,
+     CTL_TAB , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                        KC_H,   KC_J   ,  KC_K ,   KC_L ,KC_SCLN,KC_QUOTE,
      KC_LSFT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC,  WIN  ,     FKEYS  , KC_RBRC, KC_N,   KC_M   ,KC_COMM, KC_DOT ,KC_SLSH, KC_RSFT,
                                 KC_LALT, KC_LGUI,BSP_SHFT,  KC_ENT,  NAV  ,     SYM    , KC_ENT ,SPC_SHFT,KC_RGUI,KC_RALT
     ),
