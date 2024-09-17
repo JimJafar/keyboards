@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cd ~/code/qmk_firmware
+git checkout eviljimjafar
 
 # Compile
 qmk compile -kb splitkb/kyria/rev2 -km EvilJimJafar
