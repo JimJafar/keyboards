@@ -12,7 +12,7 @@ echo "Pulling in upstream changes"
 cd ~/code/qmk_firmware/
 git fetch upstream
 git checkout master
-git pull --recurse-submodules upstream master
+git pull -f --recurse-submodules upstream master
 make git-submodule
 git push
 git checkout eviljimjafar
