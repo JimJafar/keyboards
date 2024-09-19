@@ -18,8 +18,7 @@ git push
 git checkout eviljimjafar
 git pull origin master
 git commit
-git push
-git checkout eviljimjafar
+git push -f
 
 echo "Compiling firmware"
 
