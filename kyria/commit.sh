@@ -22,13 +22,13 @@ git push -f
 
 echo "Compiling firmware"
 
-#cd ~/code/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar
 qmk compile -kb splitkb/kyria/rev2 -km EvilJimJafar
 
 echo "Copying changes to Documents for syncing to NAS"
 
 cp splitkb_kyria_rev2_EvilJimJafar.hex ~/Documents/keyboards/kyria/
 
+cd ~/code/qmk_firmware/keyboards/splitkb/kyria/keymaps/EvilJimJafar
 cp config.h keymap.c rules.mk ~/Documents/keyboards/kyria/
 
 echo "Committing and pushing changes to EvilJimJafar/keyboards"
